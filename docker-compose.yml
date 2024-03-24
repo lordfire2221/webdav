@@ -1,0 +1,12 @@
+version: '1.0'
+
+services:
+  webdav:
+    image: webdav # Remplacez `votre_nom_image_webdav` par le nom de votre image Docker
+    ports:
+      - "80:8080" # Map le port 80 de l'hôte sur le port 8080 du conteneur
+    volumes:
+      - /app/data/webdav:/media # Montage du volume : map /app/data/webdav de l'hôte sur /media dans le conteneur
+    environment:
+      - WEBDAV_USERNAME=rna_webdav # Remplacez `votre_utilisateur` par votre nom d'utilisateur désiré
+      - WEBDAV_PASSWORD=Naruto_est_une_frande_je_suis_un_Hitachiste_pure # Remplacez `votre_mot_de_passe` par votre mot de passe désiré
